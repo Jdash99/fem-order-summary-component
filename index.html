@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Order summary card</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="/images/pattern-background-desktop.svg"
+        class="pattern-background"
+      />
+      <article class="card-container">
+        <div class="card-image">
+          <img src="/images/illustration-hero.svg" alt="" />
+        </div>
+        <div class="summary-container">
+          <h2>Order Summary</h2>
+          <p>
+            You can now listen to millions of songs, audiobooks and podcasts on
+            any device anywhere you like!
+          </p>
+          <div class="plan-container">
+            <div class="plan-details">
+              <div class="icon-music">
+                <img src="/images/icon-music.svg" alt="icon-music" />
+              </div>
+              <div class="annual-plan">
+                <div class="annual-plan-label">Annual Plan</div>
+                <div class="annual-plan-price">$59.99/year</div>
+              </div>
+            </div>
+
+            <a class="change-link" href="">Change</a>
+          </div>
+          <button class="pay-btn">Proceed to Payment</button>
+          <button class="cancel-btn">Cancel Order</button>
+        </div>
+      </article>
+    </div>
+  </body>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+    html {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      -webkit-box-sizing: inherit;
+      -moz-box-sizing: inherit;
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      font-size: 16px;
+      font-family: 'Red Hat Display', sans-serif;
+      background-color: #e0e8ff;
+    }
+
+    h2,
+    p {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .pattern-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -10;
+    }
+
+    .container {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-container {
+      max-width: 340px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card-image {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      overflow: hidden;
+    }
+
+    .summary-container {
+      padding: 20px 20px;
+      background-color: white;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      text-align: center;
+    }
+
+    .summary-container > h2 {
+      font-size: 22px;
+      font-weight: 900;
+      color: #2b3151;
+    }
+
+    .summary-container > p {
+      padding: 15px 20px;
+      color: #959aa0;
+    }
+
+    .plan-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px 15px;
+      background-color: #f8f9fe;
+      margin-bottom: 25px;
+      border-radius: 10px;
+    }
+
+    .plan-details {
+      display: flex;
+      column-gap: 16px;
+    }
+
+    .annual-plan-label {
+      font-weight: 700;
+      margin-bottom: 3px;
+      color: #2b3151;
+    }
+
+    .annual-plan-price {
+      color: #959aa0;
+      font-weight: 700;
+    }
+
+    .change-link {
+      color: #382ae1;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .change-link:hover {
+      color: #766cf1;
+    }
+
+    .pay-btn,
+    .cancel-btn {
+      width: 100%;
+      padding: 14px;
+      font-family: 'Red Hat Display', sans-serif;
+      font-weight: 700;
+      border-style: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .pay-btn {
+      margin-bottom: 16px;
+      background-color: #382ae1;
+      color: white;
+      text-align: center;
+      filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+        drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+    }
+
+    .pay-btn:hover {
+      background-color: #766cf1;
+    }
+
+    .cancel-btn {
+      color: #959aa0;
+      background-color: white;
+    }
+
+    .cancel-btn:hover {
+      color: #2b3151;
+    }
+
+    @media (min-width: 1440px) {
+      .card-container {
+        max-width: 450px;
+      }
+
+      .summary-container {
+        padding: 30px 40px;
+      }
+
+      .summary-container > h2 {
+        font-size: 28px;
+        font-weight: 900;
+        color: #2b3151;
+      }
+
+      .summary-container > p {
+        padding: 20px 30px;
+      }
+
+      .plan-container {
+        padding: 25px;
+      }
+
+      .annual-plan-label {
+        margin-bottom: 6px;
+      }
+    }
+  </style>
+</html>
